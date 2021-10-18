@@ -7,24 +7,19 @@ public class Even_odd {
       System.out.println("Enter the number: ");
     Scanner in = new Scanner(System.in);
     num = in.nextInt();
-    int n=num;
     int count = 0;
+        int i,sumEven=0,sumOdd=0;
+        while (num != 0) {
+        int r = num%10;
+        if(r%2 == 0)
+            sumEven =sumEven+r;
 
-    while (num != 0) {
-        // num = num/10
-        num /= 10;
-        ++count;
+        else{
+            sumOdd=sumOdd+r;
+            }
+            num = num/10;
     }
-    int i,sumEven=0,sumOdd=0;
-      for(i=1;i<=count;i++){
-        if (i % 2 == 0)
-            sumEven += n % 10;
-        else
-            sumOdd += n % 10;
-        n /= 10;
-    }
-
-      System.out.println(sumEven);
-      System.out.println(sumOdd);
+        System.out.println(sumEven);
+        System.out.println(sumOdd);
 }
     }
